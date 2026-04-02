@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#0a0e1a" />
+    <title>生日贺卡 · fcbb</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <!-- Stage -->
+    <div id="stage">
+
+      <!-- Scene 1: Card -->
+      <div id="scene-card">
+        <div id="card-wrapper">
+          <div id="card">
+            <!-- Front face -->
+            <div id="card-front">
+              <div class="card-border-deco"></div>
+              <div class="card-inner-border"></div>
+              <div class="card-title-zh">fcbb 亲启</div>
+              <div class="card-subtitle">生辰贺柬</div>
+              <!-- Wax Seal -->
+              <div id="wax-seal">
+                <canvas id="seal-canvas"></canvas>
+                <div class="seal-hint">轻触启封</div>
+              </div>
+            </div>
+            <!-- Left wing (opens left) -->
+            <div id="card-left"></div>
+            <!-- Right wing (opens right) -->
+            <div id="card-right"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scene 2: Particle canvas (overlay) -->
+      <canvas id="particle-canvas"></canvas>
+
+      <!-- Scene 3: Parchment -->
+      <div id="scene-parchment">
+        <div id="parchment">
+          <canvas id="reveal-canvas"></canvas>
+          <div id="hidden-text">
+            <div class="text-recipient">fcbb：</div>
+            <div class="text-body">
+              <p>生日快乐</p>
+              <p>天天开心喵</p>
+            </div>
+            <div class="text-signature">—— xxxxxxx.xx.xx</div>
+          </div>
+          <div class="parchment-hint">移动光标以显现</div>
+        </div>
+      </div>
+
+      <!-- Scene 4: Final -->
+      <div id="scene-final">
+        <div id="final-text">
+          <div class="final-main">生日快乐</div>
+          <div class="final-sub">愿你岁岁平安，天天开心</div>
+          <div class="final-date">2026 · 05.21</div>
+        </div>
+        <!-- floating petals canvas -->
+        <canvas id="final-canvas"></canvas>
+      </div>
+
+    </div>
+
+    <!-- Audio Toggle -->
+    <button id="audio-btn" aria-label="开关音效">
+      <svg id="icon-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+        <path d="M17 9l-4 6M13 9l4 6" stroke-linecap="round"/>
+      </svg>
+      <svg id="icon-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:none">
+        <path d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+        <path d="M15.536 8.464a5 5 0 010 7.072M19.07 4.929a10 10 0 010 14.142" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
