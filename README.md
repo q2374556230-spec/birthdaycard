@@ -5,7 +5,7 @@ cd Desktop/生日贺卡
 npm run dev      # 开发模式 http://localhost:5173
 npm run build    # 生产构建 → dist/
 
-##项目结构
+## 项目结构
 生日贺卡/
 ├── index.html          # HTML骨架 + 所有DOM场景节点
 ├── src/
@@ -17,7 +17,7 @@ npm run build    # 生产构建 → dist/
 │   ├── final.ts        # 终章浮动文字 + 金色光点画布
 │   └── audio.ts        # Web Audio API合成音效（默认静音）
 
-##实现要点
+## 实现要点
 模块	技术
 贺卡空间感	CSS perspective:1200px + transform-style:preserve-3d + rotateY
 浮动感	CSS @keyframes card-float，3D轴微旋
